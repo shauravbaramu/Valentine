@@ -1,5 +1,5 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Marvel:wght@400;700&display=swap');
 
 /* General Styles */
 body {
@@ -7,7 +7,7 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #FF9A9E, #A18CD1);
-    color: #fff;
+    color: #FFECE2;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -25,31 +25,58 @@ body {
 
 /* Logo */
 .logo {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Marvel', sans-serif;
     font-size: 40px;
     color: white;
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 250px;
 }
 
-/* Cloud Images */
-.cloud {
+.heart {
     position: absolute;
-    width: 150px;
+    top: 59px;
+    left: 361px;
 }
-.cloud-love {
-    top: 50px;
-    left: 200px;
+
+/* Cloud Cards */
+.cloud-card {
+    position: absolute;
+    text-align: center;
+    width: 220px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.cloud-is-in {
-    top: 120px;
+
+.cloud {
+    width: 200px;
+}
+
+.qoute {
+    font-family: 'Loved by the King', cursive;
+    font-size: 39px;
+    color: white;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.cloud-love-card {
+    top: 150px;
+    left: 600px;
+}
+.cloud-is-in-card {
+    top: 190px;
     left: 50%;
     transform: translateX(-50%);
 }
-.cloud-the-air {
-    top: 50px;
-    right: 200px;
+.cloud-the-air-card {
+    top: 90px;
+    right: 600px;
 }
 
 /* Leaf Images */
@@ -76,9 +103,8 @@ body {
 }
 
 .card {
+    cursor: pointer;
     height: 450px;
-    
-   
     width: 360px;
     text-align: center;
     transition: transform 0.3s ease;
@@ -87,11 +113,7 @@ body {
 .card-main {
     height: 600px;
     width: 500px;
-    
-   
-   
     border-radius: 10px;
-    
 }
 
 .card:hover {
@@ -103,25 +125,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow:  rgba(0, 0.3, 0.3, 0.3);
-}
-
-/* Buttons */
-.card button {
-    background: #FF69B4;
-    border: none;
-    color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-   
-}
-
-.card button:hover {
-    background: #FF1493;
-    transform: scale(1.1);
+    box-shadow: rgba(0, 0.3, 0.3, 0.3);
 }
 
 /* Footer */

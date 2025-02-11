@@ -39,20 +39,26 @@ body {
     left: 361px;
 }
 
+
 /* Cloud Cards */
 .cloud-card {
+    
     position: absolute;
     text-align: center;
     width: 220px;
     height: 120px;
     display: flex;
+    
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .cloud {
     width: 200px;
+    
+    
 }
 
 .qoute {
@@ -68,21 +74,44 @@ body {
 .cloud-love-card {
     top: 150px;
     left: 600px;
+    transition: top 0.3s ease; /* Add transition */
 }
 .cloud-is-in-card {
     top: 190px;
     left: 50%;
     transform: translateX(-50%);
+    transition: top 0.3s ease; /* Add transition */
 }
 .cloud-the-air-card {
     top: 90px;
     right: 600px;
+    transition: top 0.3s ease; /* Add transition */
+}
+
+.cloud-love-card.hovered {
+    top: 120px; 
+    
+    
+    /* Moves up by 30px */
+}
+
+.cloud-is-in-card.hovered {
+     /* Moves up by 30px */
+     top:160px;
+     
+    
+}
+
+.cloud-the-air-card.hovered {
+    
+    top: 60px; /* Moves up by 30px */
 }
 
 /* Leaf Images */
 .leaf {
     position: absolute;
     width: 280px;
+    transition: width 0.3s ease; /* Add transition for smooth effect */
 }
 .leaves-left {
     top: 200px;
@@ -91,6 +120,14 @@ body {
 .leaves-right {
     top: 200px;
     right: 0px;
+}
+
+.leaves-left.hovered {
+    width: 350px; /* Increase width on hover */
+}
+
+.leaves-right.hovered {
+    width: 350px; /* Increase width on hover */
 }
 
 /* Card Layout */
@@ -108,16 +145,27 @@ body {
     width: 360px;
     text-align: center;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .card-main {
     height: 600px;
     width: 500px;
     border-radius: 10px;
+    position: relative;
 }
 
 .card:hover {
     transform: scale(1.1);
+}
+
+/* Hover effect for leaves */
+.card-left:hover + .leaves-left {
+    width: 350px; /* Increase width on hover */
+}
+
+.card-right:hover + .leaves-right {
+    width: 350px; /* Increase width on hover */
 }
 
 .card img {
@@ -126,6 +174,36 @@ body {
     object-fit: cover;
     border-radius: 15px;
     box-shadow: rgba(0, 0.3, 0.3, 0.3);
+}
+
+.card-btn, .surprise-btn {
+    font-family: "Loved by the King";
+    font-size: 25px;
+    color: #FF7D9C;
+    background-color: #FFECE8;
+    border: none;
+    border-bottom: 1px solid #FF7D9C;
+    cursor: pointer;
+    padding: 0px 10px;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 31px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 0px rgba(255, 125, 156, 0);
+}
+
+.surprise-btn {
+    font-size: 25px;
+    padding: 0px 25px;
+    border-radius: 12px;
+    border: 1px solid #FF7D9C;
+}
+
+/* Hover Effect */
+.card-btn:hover, .surprise-btn:hover {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 0.91;
 }
 
 /* Footer */
